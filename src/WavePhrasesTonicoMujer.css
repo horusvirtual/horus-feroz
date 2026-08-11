@@ -1,0 +1,36 @@
+/* ============================================================
+   WAVE PHRASES - FRASES FLOTANTES DISPERSAS
+   ============================================================ */
+
+.wave-phrase-floating {
+  position: absolute;
+  z-index: 6;
+  font-size: clamp(16px, 1vw, 14px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-family: 'Jost', sans-serif;
+  color: #000000;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.wave-phrase-bullet {
+  font-weight: 600;
+  color: #A87D3D;
+  display: inline-block;
+}
+
+.wave-line {
+  display: inline-block;
+}
+
+.wave-letter {
+  display: inline-block;
+  will-change: transform;
+}
+
+@media (max-width: 800px) {
+  .wave-phrase-floating {
+    display: none; /* en móvil se recomiendan ocultas o reposicionadas manualmente */
+  }
+}
