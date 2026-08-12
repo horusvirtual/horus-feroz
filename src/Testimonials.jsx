@@ -5,39 +5,39 @@ import React from 'react'
 import iphoneFrame from "./assets/celular.png"
 
 // Importar las capturas de WhatsApp para cada testimonio
-import whatsapp1 from "./assets/6.png"
-import whatsapp2 from "./assets/6.png"
-import whatsapp3 from "./assets/6.png"
-import whatsapp4 from "./assets/6.png"
-import whatsapp5 from "./assets/6.png"
+import whatsapp1 from "./assets/testimonio_1.jpeg"
+import whatsapp2 from "./assets/testimonio_2.jpeg"
+import whatsapp3 from "./assets/testimonio_3.jpeg"
+// import whatsapp4 from "./assets/6.png"
+// import whatsapp5 from "./assets/6.png"
 
 function Testimonials() {
   const testimonials = [
     { 
       id: 1, 
       screenshot: whatsapp1, 
-      name: "María González",
+      name: "Carlos",
     },
     { 
       id: 2, 
       screenshot: whatsapp2, 
-      name: "Carlos López",
+      name: "Claudia",
     },
     { 
       id: 3, 
       screenshot: whatsapp3, 
-      name: "Ana Martínez",
+      name: "Diana",
     },
-    { 
-      id: 4, 
-      screenshot: whatsapp4, 
-      name: "Juan Pérez",
-    },
-    { 
-      id: 5, 
-      screenshot: whatsapp5, 
-      name: "Laura Sánchez",
-    },
+    // { 
+    //   id: 4, 
+    //   screenshot: whatsapp4, 
+    //   name: "Juan Pérez",
+    // },
+    // { 
+    //   id: 5, 
+    //   screenshot: whatsapp5, 
+    //   name: "Laura Sánchez",
+    // },
   ]
 
   return (

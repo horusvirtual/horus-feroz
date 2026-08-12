@@ -811,11 +811,12 @@ nav .logo {
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: clamp(15px, 2vw, 30px);
-  max-width: 1200px;
-  margin: 0 auto;
+display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(37px, 54vw, 94px);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .testimonial-card {
@@ -844,14 +845,14 @@ nav .logo {
 }
 
 .iphone-frame-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
-  transition: filter 0.3s ease;
+     width: 109%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    transition: filter 0.3s ease;
 }
 
 .iphone-container:hover .iphone-frame-image {
@@ -859,16 +860,17 @@ nav .logo {
 }
 
 .whatsapp-inside {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 89%;
-  height: 89%;
-  object-fit: cover;
-  border-radius: 8%;
-  z-index: 1;
-  display: block;
+  max-width: 99.5%;
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 99%;
+    height: 92.2%;
+    object-fit: cover;
+    border-radius: 25px;
+    z-index: 1;
+    display: block;
 }
 
 .testimonial-name {
@@ -1313,10 +1315,6 @@ nav .logo {
   .slider-track {
     aspect-ratio: 16/8;
   }
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
   .iphone-container {
     max-width: 170px;
   }
@@ -1368,10 +1366,6 @@ nav .logo {
   .slider-dots {
     bottom: clamp(12px, 2vw, 20px);
     gap: clamp(6px, 1.2vw, 10px);
-  }
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
   }
   .iphone-container {
     max-width: 140px;
@@ -1512,10 +1506,6 @@ nav .logo {
     bottom: clamp(8px, 1.5vw, 14px);
     gap: clamp(5px, 1.5vw, 8px);
   }
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
   .iphone-container {
     max-width: 110px;
   }
@@ -1567,10 +1557,6 @@ nav .logo {
 
 /* Móviles muy pequeños */
 @media (max-width: 380px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
   .iphone-container {
     max-width: 85px;
   }
