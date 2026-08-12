@@ -479,6 +479,7 @@ export default function App() {
             <h1
               className="display"
               style={{
+                    marginLeft: "5%",
                 color: "#000000",
                 fontSize: "clamp(56px, 8vw, 140px)",
                 lineHeight: "0.85",
