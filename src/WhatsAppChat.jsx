@@ -1,8 +1,8 @@
 // WhatsAppChat.jsx
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 
 const PRODUCTS = [
-  "Shampoo Crecimiento Hombre Feroz (Carda)",
+  "Shampoo Crecimiento Hombre Feroz ",
   "Tónico Capilar Hombre Feroz",
   "Bálsamo Hombre Feroz",
   "Shampoo Crecimiento Mujer Feroz",
@@ -11,7 +11,6 @@ const PRODUCTS = [
 ]
 
 const PHONE = "573207182364" // 👉 cambia por tu número real (sin + ni espacios)
-const REDIRECT_SECONDS = 5
 
 // Estilos críticos inline: garantizan que el botón flote correctamente
 // aunque haya algún problema con la carga del archivo CSS externo.
@@ -53,25 +52,15 @@ export default function WhatsAppChat() {
   const [open, setOpen] = useState(false)
   const [stage, setStage] = useState("greeting") // greeting -> list -> redirecting
   const [selected, setSelected] = useState(null)
-  const [countdown, setCountdown] = useState(REDIRECT_SECONDS)
-  const timerRef = useRef(null)
-
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
-    }
-  }, [])
 
   const openChat = () => {
     setOpen(true)
     setStage("greeting")
     setSelected(null)
-    setCountdown(REDIRECT_SECONDS)
   }
 
   const closeChat = () => {
     setOpen(false)
-    if (timerRef.current) clearInterval(timerRef.current)
   }
 
   const goToList = () => setStage("list")
@@ -79,24 +68,14 @@ export default function WhatsAppChat() {
   const selectProduct = (product) => {
     setSelected(product)
     setStage("redirecting")
-    setCountdown(REDIRECT_SECONDS)
+  }
 
-    timerRef.current = setInterval(() => {
-      setCountdown((prev) => {
-        if (prev <= 1) {
-          clearInterval(timerRef.current)
-          const message = `Hola, quiero más información sobre el producto: ${product}`
-          const link = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`
-          // window.location.href en vez de window.open: los navegadores bloquean
-          // window.open cuando no ocurre como resultado directo de un clic (como
-          // aquí, que se dispara tras un setInterval). Redirigir la misma pestaña
-          // nunca se bloquea.
-          window.location.href = link
-          return 0
-        }
-        return prev - 1
-      })
-    }, 1000)
+  const goToWhatsApp = () => {
+    const message = `Hola, quiero más información sobre el producto: ${selected}`
+    const link = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`
+    // Esto ocurre como resultado directo de un clic del usuario, así que
+    // window.open no será bloqueado por el navegador.
+    window.open(link, "_blank", "noopener,noreferrer")
   }
 
   return (
@@ -163,8 +142,10 @@ export default function WhatsAppChat() {
             {stage === "redirecting" && (
               <div className="chat-bubble">
                 <p>Elegiste: <strong>{selected}</strong></p>
-                <p>Serás redirigido a un asesor en <strong>{countdown}</strong> segundo{countdown !== 1 ? "s" : ""}…</p>
-                <div className="chat-spinner" />
+                <p>Haz clic en el botón para hablar con un asesor por WhatsApp.</p>
+                <button className="chat-action-btn" onClick={goToWhatsApp}>
+                  Ir a WhatsApp
+                </button>
               </div>
             )}
           </div>
