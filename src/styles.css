@@ -116,7 +116,7 @@ a {
 }
 
 /* ============================================
-   NAVEGACIÓN
+   NAVEGACIÓN - VERSIÓN MEJORADA PARA MÓVILES
    ============================================ */
 nav {
   position: fixed;
@@ -192,6 +192,178 @@ nav .logo {
 
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+/* ============================================
+   RESPONSIVE - NAV PARA MÓVILES
+   ============================================ */
+
+/* Tablets y móviles grandes */
+@media (max-width: 900px) {
+  nav {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    justify-content: center;
+  }
+
+  nav .logo {
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 16px;
+    flex: 0 0 auto;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Móviles estándar */
+@media (max-width: 640px) {
+  nav {
+    padding: 10px 12px;
+    row-gap: 4px;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  nav .logo {
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  .nav-left {
+    order: -1;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .nav-right {
+    order: 1;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .nav-link {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .nav-link::after {
+    bottom: -2px;
+    height: 1px;
+  }
+
+  nav.has-top-bar {
+    top: 34px;
+  }
+
+  [id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* ============================================
+   TESTIMONIOS EN COLUMNA - SOLO MÓVILES
+   ============================================ */
+@media (max-width: 640px) {
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(24px, 6vw, 40px);
+  }
+
+  .iphone-container {
+    max-width: 220px; /* un poco más grande ya que hay espacio vertical */
+  }
+
+  .iphone-wrapper{
+    min-width: 300%;
+    width: 221% !important;
+  }
+
+  .testimonial-name{
+            font-size: 22px !important;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  nav {
+    padding: 8px 10px;
+    row-gap: 2px;
+  }
+
+  nav .logo {
+    height: 38px;
+  }
+
+  .nav-left {
+    gap: 6px;
+  }
+
+  .nav-right {
+    gap: 6px;
+  }
+
+  .nav-link {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  nav.has-top-bar {
+    top: 36px;
+  }
+
+  [id] {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 380px) {
+  nav {
+    padding: 6px 8px;
+  }
+
+  nav .logo {
+    height: 32px;
+  }
+
+  .nav-left {
+    gap: 4px;
+  }
+
+  .nav-right {
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 7px;
+    letter-spacing: 0.02em;
+  }
 }
 
 /* ============================================
@@ -513,17 +685,60 @@ nav .logo {
   transform: scale(1.05);
 }
 
-.product-logo.top-left {
+
+.product-logo.top-left1 {
   top: clamp(124px, 4vh, 60px);
   left: clamp(119px, 3vw, 48px);
 }
 
-.product-logo.center-right {
+.product-logo.center-right1 {
+  top: 50%;
+  right: clamp(20px, 3vw, 48px);
+  transform: translateY(-50%);
+}
+.product-logo.top-left2 {
+  top: clamp(124px, 4vh, 60px);
+  left: clamp(119px, 3vw, 48px);
+}
+
+.product-logo.center-right2 {
   top: 50%;
   right: clamp(20px, 3vw, 48px);
   transform: translateY(-50%);
 }
 
+.product-logo.top-left3 {
+  top: clamp(124px, 4vh, 60px);
+  left: clamp(119px, 3vw, 48px);
+}
+
+.product-logo.center-right3 {
+  top: 50%;
+  right: clamp(20px, 3vw, 48px);
+  transform: translateY(-50%);
+}
+
+.product-logo.top-left4 {
+  top: clamp(124px, 4vh, 60px);
+  left: clamp(119px, 3vw, 48px);
+}
+
+.product-logo.center-right4 {
+  top: 50%;
+  right: clamp(20px, 3vw, 48px);
+  transform: translateY(-50%);
+}
+
+.product-logo.top-left5 {
+  top: clamp(124px, 4vh, 60px);
+  left: clamp(119px, 3vw, 48px);
+}
+
+.product-logo.center-right5 {
+  top: 50%;
+  right: clamp(20px, 3vw, 48px);
+  transform: translateY(-50%);
+}
 .product-logo.center-right:hover {
   transform: translateY(-50%) scale(1.05);
 }
@@ -644,7 +859,8 @@ nav .logo {
 /* Móviles pequeños */
 @media (max-width: 480px) {
   .hero {
-    min-height: 50svh;
+            margin-top: 21%;
+    min-height: 40svh;
     background-position: center 45%;
   }
 }
@@ -1331,6 +1547,32 @@ display: flex;
     width: min(60vw, 280px) !important;
     margin-right: 0 !important;
   }
+
+  /* --- FIX: las imágenes de producto traían margin-left/margin-top
+     en % inline pensados para el layout horizontal de escritorio.
+     Al apilar en columna eso las estira verticalmente y las descentra.
+     Se resetean acá para que queden centradas y con proporción normal. */
+  .product-section .product-shot img {
+    margin: 0 auto !important;
+    width: 70% !important;
+    max-width: 260px;
+    display: block !important;
+  }
+
+  /* --- FIX: los margin-top negativos de los títulos (.title2 a .title5)
+     estaban pensados para pegar el título contra la imagen superpuesta
+     del layout horizontal. En columna eso monta el título sobre la foto. */
+  .title2,
+  .title3,
+  .title4,
+  .title5 {
+    margin-top: 0 !important;
+  }
+  /* El h1 de la sección 1 trae marginLeft: 5% inline */
+  .product-section .display {
+    margin-left: 0 !important;
+  }
+
   .product-section .display {
     font-size: clamp(40px, 10vw, 72px) !important;
   }
@@ -1410,33 +1652,68 @@ display: flex;
   }
 }
 
-/* Móviles */
+/* Móviles - el nav ya está cubierto arriba */
 @media (max-width: 640px) {
-  .nav-left,
-  .nav-right {
-    gap: 18px;
-  }
-  .nav-link {
-    font-size: 10px;
-  }
-  nav .logo {
-    height: 26px;
-  }
-  nav {
-    padding: 14px 18px;
-    height: 68px;
-  }
-  nav.has-top-bar {
-    top: 34px;
-  }
   .product-logo {
     width: clamp(40px, 10vw, 60px) !important;
   }
-  .product-logo.top-left {
-    top: clamp(16px, 2vh, 30px);
-    left: clamp(12px, 2vw, 20px);
+
+  .product-logo.top-left1 {
+   width: 30% !important;
+        top: clamp(16px, 2vh, 30px);
+        left: clamp(12px, 2vw, 20px);
   }
-  .product-logo.center-right {
+  .product-logo.center-right1 {
+          margin-top: -3%;
+        width: 30% !important;
+        right: clamp(12px, 2vw, 20px);
+  }
+
+    .product-logo.top-left2 {
+              margin-left: -5%;
+   width: 45% !important;
+        top: clamp(16px, 2vh, 30px);
+        left: clamp(12px, 2vw, 20px);
+  }
+  .product-logo.center-right2 {
+    margin-right: -8%!important;
+    margin-top: -5%;
+    width: 45% !important;
+    right: clamp(0px, 2vw, 20px);
+  }
+
+    .product-logo.top-left3 {
+      height: 18% !important;
+   width: 30% !important;
+        top: clamp(5px, 2vh, 30px);
+        left: clamp(12px, 2vw, 20px);
+  }
+  .product-logo.center-right3 {
+     height: 18% !important;
+    margin-top: -46%;
+    width: 30% !important;
+    right: clamp(12px, 2vw, 20px);
+  }
+
+    .product-logo.top-left4 {
+   width: 30% !important;
+        top: clamp(16px, 2vh, 30px);
+        left: clamp(12px, 2vw, 20px);
+  }
+  .product-logo.center-right4 {
+    margin-top: -23%!important;
+    width: 30% !important;
+    right: clamp(12px, 2vw, 20px);
+  }
+
+    .product-logo.top-left5 {
+   width: 30% !important;
+        top: clamp(16px, 2vh, 30px);
+        left: clamp(12px, 2vw, 20px);
+  }
+  .product-logo.center-right5 {
+    margin-top: -13%;
+    width: 30% !important;
     right: clamp(12px, 2vw, 20px);
   }
   [id] {
@@ -1446,19 +1723,16 @@ display: flex;
 
 /* Móviles pequeños */
 @media (max-width: 480px) {
-  .nav-left .nav-link:last-child,
-  .nav-right .nav-link:first-child {
-    display: none;
-  }
-  .nav-left,
-  .nav-right {
-    gap: 12px;
-  }
   .product-section {
     padding: clamp(60px, 8vw, 80px) clamp(16px, 4vw, 24px) !important;
   }
   .product-section .product-shot {
+    margin-left: -9%;
     width: min(70vw, 200px) !important;
+  }
+  .product-section .product-shot img {
+            margin-left: 3% !important;
+    width: 75% !important;
   }
   .product-section .display {
     font-size: clamp(32px, 8vw, 48px) !important;

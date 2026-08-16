@@ -424,13 +424,13 @@ export default function App() {
         <img
           src={logoIzquierda1}
           alt="Logo izquierda"
-          className="product-logo top-left"
+          className="product-logo top-left1"
           style={{ width: "183px", height: "183px" }}
         />
         <img
           src={logoDerecha1}
           alt="Logo derecha"
-          className="product-logo center-right"
+          className="product-logo center-right1"
           style={{ width: "183px", height: "183px" }}
         />
 
@@ -581,13 +581,13 @@ export default function App() {
         <img
           src={logoIzquierda2}
           alt="Logo izquierda"
-          className="product-logo top-left"
+          className="product-logo top-left2"
           style={{ width: "183px", height: "183px" }}
         />
         <img
           src={logoDerecha2}
           alt="Logo derecha"
-          className="product-logo center-right"
+          className="product-logo center-right2"
           style={{ width: "183px", height: "183px" }}
         />
 
@@ -737,13 +737,13 @@ export default function App() {
         <img
           src={logoIzquierda3}
           alt="Logo izquierda"
-          className="product-logo top-left"
+          className="product-logo top-left3"
           style={{ width: "183px", height: "183px" }}
         />
         <img
           src={logoDerecha3}
           alt="Logo derecha"
-          className="product-logo center-right"
+          className="product-logo center-right3"
           style={{ width: "183px", height: "183px" }}
         />
 
@@ -897,13 +897,13 @@ export default function App() {
         <img
           src={logoIzquierda4}
           alt="Logo izquierda"
-          className="product-logo top-left"
+          className="product-logo top-left4"
           style={{ width: "183px", height: "183px" }}
         />
         <img
           src={logoDerecha4}
           alt="Logo derecha"
-          className="product-logo center-right"
+          className="product-logo center-right4"
           style={{ width: "183px", height: "183px" }}
         />
 
@@ -1053,13 +1053,13 @@ export default function App() {
         <img
           src={logoIzquierda5}
           alt="Logo izquierda"
-          className="product-logo top-left"
+          className="product-logo top-left5"
           style={{ width: "183px", height: "183px" }}
         />
         <img
           src={logoDerecha5}
           alt="Logo derecha"
-          className="product-logo center-right"
+          className="product-logo center-right5"
           style={{ width: "183px", height: "183px" }}
         />
 
